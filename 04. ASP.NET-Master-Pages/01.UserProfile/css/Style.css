@@ -1,0 +1,35 @@
+﻿body {
+}
+
+#header {
+    background: #EEEEEE;
+    text-align: center;
+}
+
+#sidebar {
+    float: left;
+    width: 150px;
+    height:auto;
+    background:#2fdb0e;
+}
+
+    #sidebar .sidebar-title {
+        font-size: 14pt;
+        font-weight: bold;
+    }
+
+#main-content {
+    float: left;
+    left: 160px;
+    padding: 10px;
+}
+
+    #main-content h1 {
+        color: green;
+    }
+
+#footer {
+    clear: both;
+    text-align: center;
+    background: #EEEEEE;
+}
