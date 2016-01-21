@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.RandomGenHtmlControls", "01.RandomGenHtmlControls\01.RandomGenHtmlControls.csproj", "{9D3C196D-C5D0-4571-9BE0-A04570E8C52F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.RandomGenWebControls", "01.RandomGenWebControls\01.RandomGenWebControls.csproj", "{8CC068C2-29E7-41DD-B4CD-868C64DD628A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Escaping", "02.Escaping\02.Escaping.csproj", "{804B040E-8061-4983-A98A-6A0CC06E365B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.RegistrationForm", "03.RegistrationForm\03.RegistrationForm.csproj", "{B367C876-A6FA-4E6C-B37D-B77D45267521}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.TicTacToe", "04.TicTacToe\04.TicTacToe.csproj", "{151182C1-E659-40BB-ADA9-36DDDA9934AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.WebCalculator", "05.WebCalculator\05.WebCalculator.csproj", "{856F6A1F-B506-4478-B9C5-0A6F6875B08F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D3C196D-C5D0-4571-9BE0-A04570E8C52F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D3C196D-C5D0-4571-9BE0-A04570E8C52F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D3C196D-C5D0-4571-9BE0-A04570E8C52F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D3C196D-C5D0-4571-9BE0-A04570E8C52F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CC068C2-29E7-41DD-B4CD-868C64DD628A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CC068C2-29E7-41DD-B4CD-868C64DD628A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CC068C2-29E7-41DD-B4CD-868C64DD628A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CC068C2-29E7-41DD-B4CD-868C64DD628A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{804B040E-8061-4983-A98A-6A0CC06E365B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{804B040E-8061-4983-A98A-6A0CC06E365B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{804B040E-8061-4983-A98A-6A0CC06E365B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{804B040E-8061-4983-A98A-6A0CC06E365B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B367C876-A6FA-4E6C-B37D-B77D45267521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B367C876-A6FA-4E6C-B37D-B77D45267521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B367C876-A6FA-4E6C-B37D-B77D45267521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B367C876-A6FA-4E6C-B37D-B77D45267521}.Release|Any CPU.Build.0 = Release|Any CPU
+		{151182C1-E659-40BB-ADA9-36DDDA9934AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{151182C1-E659-40BB-ADA9-36DDDA9934AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{151182C1-E659-40BB-ADA9-36DDDA9934AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{151182C1-E659-40BB-ADA9-36DDDA9934AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{856F6A1F-B506-4478-B9C5-0A6F6875B08F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{856F6A1F-B506-4478-B9C5-0A6F6875B08F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{856F6A1F-B506-4478-B9C5-0A6F6875B08F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{856F6A1F-B506-4478-B9C5-0A6F6875B08F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
