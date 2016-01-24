@@ -1,0 +1,68 @@
+﻿body {
+    font-family: Arial, Tahoma;
+    font-size: 15px;
+}
+
+.grid {
+    width: 100%;
+    font: inherit;
+    background-color: #FFF;
+    border: solid 1px #525252;
+}
+
+    .grid td {
+        font: inherit;
+        padding: 3px 5px;
+        border: solid 1px #C1C1C1;
+        color: #333;
+        text-align: left;
+    }
+
+    .grid th {
+        padding: 3px;
+        color: #FFF;
+        background: #424242;
+        border-left: solid 1px #525252;
+        font: inherit;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+h3 {
+    color: #000;
+    text-decoration: underline;
+}
+
+#divDetail {
+    float: left;
+    font: inherit;
+    font-size: 13px;
+    padding: 2px 5px;
+    width: auto;
+    border: solid 2px #CCC;
+    border-radius: 0 7px 7px 0;
+    display: none;
+    color: #333;
+}
+
+    #divDetail p {
+        font: inherit;
+        width: 200px;
+    }
+
+    #divDetail a {
+        font: inherit;
+        float: right;
+        background-color: #357AE8;
+        color: #FFF;
+        text-decoration: none;
+        border: solid 1px #2F5BB7;
+        border-radius: 3px;
+        padding: 3px;
+    }
+
+    img{
+        width:100px;
+        height:100px;
+    }
+
