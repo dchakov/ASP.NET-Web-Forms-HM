@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -10,12 +12,31 @@ namespace World.Web
 {
     public partial class Index : System.Web.UI.Page
     {
+        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=World;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+
         WorldEntities data = new WorldEntities();
 
         private List<Country> countries = new List<Country>();
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //if (!IsPostBack)
+            //{
+            //    try
+            //    {
+            //        SqlDataAdapter adp = new SqlDataAdapter("Select * from Countries", con);
+            //        DataTable dt = new DataTable();
+            //        adp.Fill(dt);
+            //        if (dt.Rows.Count > 0)
+            //        {
+            //            GridViewCountries.DataSource = dt;
+            //            GridViewCountries.DataBind();
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    { }
+            //}
+
             //foreach (var item in this.data.Countries.ToList())
             //{
             //    byte[] photo = item.Image;

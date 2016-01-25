@@ -10,7 +10,7 @@
 namespace _03.Cookies {
     
     
-    public partial class Login {
+    public partial class Index {
         
         /// <summary>
         /// form1 control.
@@ -22,21 +22,12 @@ namespace _03.Cookies {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// TextBoxUser control.
+        /// LiteralLogIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxUser;
-        
-        /// <summary>
-        /// ButtonLogin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonLogin;
+        protected global::System.Web.UI.WebControls.Literal LiteralLogIn;
     }
 }

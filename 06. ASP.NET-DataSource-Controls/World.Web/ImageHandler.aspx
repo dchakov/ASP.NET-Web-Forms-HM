@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="_03.Cookies.Index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ImageHandler.aspx.cs" Inherits="World.Web.ImageHandler" %>
 
 <!DOCTYPE html>
 

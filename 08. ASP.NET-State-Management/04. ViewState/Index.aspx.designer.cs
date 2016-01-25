@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _03.Cookies {
+namespace _04.ViewState {
     
     
-    public partial class Login {
+    public partial class Index {
         
         /// <summary>
         /// form1 control.
@@ -22,21 +22,30 @@ namespace _03.Cookies {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// TextBoxUser control.
+        /// TextBoxInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxUser;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxInput;
         
         /// <summary>
-        /// ButtonLogin control.
+        /// ButtonSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonLogin;
+        protected global::System.Web.UI.WebControls.Button ButtonSubmit;
+        
+        /// <summary>
+        /// LabelOutput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelOutput;
     }
 }
