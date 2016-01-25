@@ -25,6 +25,7 @@ namespace World.Web
         public string Language { get; set; }
         public decimal Population { get; set; }
         public int ContinentId { get; set; }
+        public byte[] Image { get; set; }
     
         public virtual Continent Continent { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

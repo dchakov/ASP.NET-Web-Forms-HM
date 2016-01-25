@@ -198,28 +198,11 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
-    <Content Include="Todo.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Todo.edmx</DependentUpon>
-      <LastGenOutput>Todo.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Todo.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Todo.edmx</DependentUpon>
-      <LastGenOutput>Todo1.cs</LastGenOutput>
-    </Content>
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <EntityDeploy Include="Todo.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Todo.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Todo.edmx.diagram">
-      <DependentUpon>Todo.edmx</DependentUpon>
-    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -230,12 +213,6 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Category.cs">
-      <DependentUpon>Todo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="C__MigrationHistory.cs">
-      <DependentUpon>Todo.tt</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -253,24 +230,6 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Todo.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Todo.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Todo.cs">
-      <DependentUpon>Todo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Todo.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Todo.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Todo1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Todo.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

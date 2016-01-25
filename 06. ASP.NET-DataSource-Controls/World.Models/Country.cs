@@ -21,6 +21,8 @@
 
         public int ContinentId { get; set; }
 
+        public byte[] Image { get; set; }
+
         public virtual Continent Continent { get; set; }
 
         public virtual ICollection<Town> Towns

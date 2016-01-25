@@ -31,6 +31,7 @@
           <Property Name="Language" Type="nvarchar(max)" />
           <Property Name="Population" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="ContinentId" Type="int" Nullable="false" />
+          <Property Name="Image" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="Towns">
           <Key>
@@ -42,9 +43,7 @@
           <Property Name="CountryId" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_dbo_Countries_dbo_Continents_ContinentId">
-          <End Role="Continents" Type="Self.Continents" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="Continents" Type="Self.Continents" Multiplicity="1" />
           <End Role="Countries" Type="Self.Countries" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Continents">
@@ -56,9 +55,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_dbo_Towns_dbo_Countries_CountryId">
-          <End Role="Countries" Type="Self.Countries" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
           <End Role="Towns" Type="Self.Towns" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Countries">
@@ -115,6 +112,7 @@
           <Property Name="Language" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Population" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="ContinentId" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="Continent" Relationship="Self.FK_dbo_Countries_dbo_Continents_ContinentId" FromRole="Countries" ToRole="Continents" />
           <NavigationProperty Name="Towns" Relationship="Self.FK_dbo_Towns_dbo_Countries_CountryId" FromRole="Countries" ToRole="Towns" />
         </EntityType>
@@ -129,9 +127,7 @@
           <NavigationProperty Name="Country" Relationship="Self.FK_dbo_Towns_dbo_Countries_CountryId" FromRole="Towns" ToRole="Countries" />
         </EntityType>
         <Association Name="FK_dbo_Countries_dbo_Continents_ContinentId">
-          <End Role="Continents" Type="Self.Continent" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="Continents" Type="Self.Continent" Multiplicity="1" />
           <End Role="Countries" Type="Self.Country" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Continents">
@@ -143,9 +139,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_dbo_Towns_dbo_Countries_CountryId">
-          <End Role="Countries" Type="Self.Country" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="Countries" Type="Self.Country" Multiplicity="1" />
           <End Role="Towns" Type="Self.Town" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Countries">
@@ -202,6 +196,7 @@
                 <ScalarProperty Name="Language" ColumnName="Language" />
                 <ScalarProperty Name="Population" ColumnName="Population" />
                 <ScalarProperty Name="ContinentId" ColumnName="ContinentId" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

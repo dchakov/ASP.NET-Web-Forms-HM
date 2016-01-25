@@ -18,14 +18,5 @@
         public virtual IDbSet<Town> Towns { get; set; }
 
         public virtual IDbSet<Country> Countries { get; set; }
-
-
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
-            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
-
-            base.OnModelCreating(modelBuilder);
-        }
     }
 }

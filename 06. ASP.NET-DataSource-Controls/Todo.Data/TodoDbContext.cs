@@ -2,31 +2,18 @@
 {
     using Todo.Models;
     using System.Data.Entity;
-    using System.Data.Entity.ModelConfiguration.Conventions;
+    using Migrations;
 
     public class TodoDbContext : DbContext
     {
         public TodoDbContext()
             : base("TodoConnection")
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<TodoDbContext, Configuration>());
         }
 
         public virtual IDbSet<Todo> Todos { get; set; }
 
         public virtual IDbSet<Category> Categories { get; set; }
-
-
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
-            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
-
-            base.OnModelCreating(modelBuilder);
-        }
-
-        public static TodoDbContext Create()
-        {
-            return new TodoDbContext();
-        }
     }
 }

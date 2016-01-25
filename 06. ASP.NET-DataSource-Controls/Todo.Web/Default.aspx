@@ -84,16 +84,14 @@
     </asp:ListView>
 
     <asp:SqlDataSource ID="SqlDataSourceCategories" runat="server"
-        ConflictDetection="CompareAllValues"
         ConnectionString="<%$ ConnectionStrings:TodoDbaseConnectionString %>"
-        DeleteCommand="DELETE FROM [Categories] WHERE [Id] = @original_Id)"
+        DeleteCommand="DELETE FROM [Categories] WHERE [Id] = @original_Id"
         InsertCommand="INSERT INTO [Categories] ([Name]) VALUES (@Name)"
         OldValuesParameterFormatString="original_{0}"
         SelectCommand="SELECT * FROM [Categories]"
-        UpdateCommand="UPDATE [Categories] SET [Name] = @Name WHERE [Id] = @original_Id AND (([Name] = @original_Name) OR ([Name] IS NULL AND @original_Name IS NULL))">
+        UpdateCommand="UPDATE [Categories] SET [Name] = @Name WHERE [Id] = @original_Id">
         <DeleteParameters>
             <asp:Parameter Name="original_Id" Type="Int32" />
-            <asp:Parameter Name="original_Name" Type="String" />
         </DeleteParameters>
         <InsertParameters>
             <asp:Parameter Name="Name" Type="String" />
@@ -101,12 +99,14 @@
         <UpdateParameters>
             <asp:Parameter Name="Name" Type="String" />
             <asp:Parameter Name="original_Id" Type="Int32" />
-            <asp:Parameter Name="original_Name" Type="String" />
         </UpdateParameters>
     </asp:SqlDataSource>
 
     <h3>Todos</h3>
-    <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSourceTodo" DataKeyNames="Id" InsertItemPosition="LastItem">
+    <asp:ListView ID="ListView1" runat="server" 
+        DataSourceID="SqlDataSourceTodo" 
+        DataKeyNames="Id" 
+        InsertItemPosition="LastItem" OnItemInserted="ListView1_ItemInserted">
         <AlternatingItemTemplate>
             <li style="background-color: #FFF8DC;">Id:
                 <asp:Label ID="IdLabel" runat="server" Text='<%# Eval("Id") %>' />
@@ -155,8 +155,6 @@
                 <asp:TextBox ID="TitleTextBox" runat="server" Text='<%# Bind("Title") %>' />
                 <br />Content:
                 <asp:TextBox ID="ContentTextBox" runat="server" Text='<%# Bind("Content") %>' />
-                <br />LastModified:
-                <asp:TextBox ID="LastModifiedTextBox" runat="server" Text='<%# Bind("LastModified") %>' />
                 <br />CategoryId:
                 <asp:TextBox ID="CategoryIdTextBox" runat="server" Text='<%# Bind("CategoryId") %>' />
                 <br />
@@ -222,7 +220,9 @@
     </asp:ListView>
      
     
-    <asp:SqlDataSource ID="SqlDataSourceTodo" runat="server" ConnectionString="<%$ ConnectionStrings:TodoDbaseConnectionString2 %>" DeleteCommand="DELETE FROM [Todoes] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Todoes] ([Title], [Content], [LastModified], [CategoryId]) VALUES (@Title, @Content, @LastModified, @CategoryId)" SelectCommand="SELECT * FROM [Todoes]" UpdateCommand="UPDATE [Todoes] SET [Title] = @Title, [Content] = @Content, [LastModified] = @LastModified, [CategoryId] = @CategoryId WHERE [Id] = @Id">
+    <asp:SqlDataSource ID="SqlDataSourceTodo" runat="server" ConnectionString="<%$ ConnectionStrings:TodoDbaseConnectionString2 %>" 
+        DeleteCommand="DELETE FROM [Todoes] WHERE [Id] = @Id" 
+        InsertCommand="SET @LastModified = GETDATE();INSERT INTO [Todoes] ([Title], [Content], [LastModified], [CategoryId]) VALUES (@Title, @Content, @LastModified, @CategoryId)" SelectCommand="SELECT * FROM [Todoes]" UpdateCommand="UPDATE [Todoes] SET [Title] = @Title, [Content] = @Content, [LastModified] = @LastModified, [CategoryId] = @CategoryId WHERE [Id] = @Id">
         <DeleteParameters>
             <asp:Parameter Name="Id" Type="Int32" />
         </DeleteParameters>

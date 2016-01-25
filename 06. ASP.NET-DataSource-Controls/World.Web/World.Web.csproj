@@ -108,6 +108,16 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="World.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>World.edmx</DependentUpon>
+      <LastGenOutput>World.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="World.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>World.edmx</DependentUpon>
+      <LastGenOutput>World.cs</LastGenOutput>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -127,16 +137,6 @@
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Web.config" />
-    <Content Include="World.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>World.edmx</DependentUpon>
-      <LastGenOutput>World.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="World.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>World.edmx</DependentUpon>
-      <LastGenOutput>World.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Continent.cs">
