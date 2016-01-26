@@ -21,7 +21,7 @@
     <asp:UpdateProgress ID="UpdateProgress" runat="server">
         <ProgressTemplate>
             Updating ...
-            <img src="Images/loading.gif" alt="" height="100" width="100" />
+            <img src="Images/loading.gif" alt="" height="50" width="50" />
         </ProgressTemplate>
     </asp:UpdateProgress>
 
@@ -34,13 +34,5 @@
             </asp:GridView>
         </ContentTemplate>
     </asp:UpdatePanel>
-
-    <script type="text/javascript">
-        function showProgress() {
-            var updateProgress = $get("<%= UpdateProgress.ClientID %>");
-            updateProgress.style.display = "block";
-        }
-    </script>
-
 
 </asp:Content>

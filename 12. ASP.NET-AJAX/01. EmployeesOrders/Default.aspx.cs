@@ -40,12 +40,12 @@ namespace _01.EmployeesOrders
 
         protected void GridViewEmployees_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var client = this.UpdateProgress.ClientID;
-            
-            Thread.Sleep(3000);
+            this.UpdateProgress.Attributes.CssStyle["display"] = "block";
+            Thread.Sleep(5000);
             var gridView = sender as GridView;
             var employeeId = int.Parse(gridView.SelectedValue.ToString());
             this.RebindOrders(employeeId);
+           
         }
 
         private void RebindOrders(int employeeId)
@@ -53,6 +53,7 @@ namespace _01.EmployeesOrders
             var db = new NorthwindEntities();
             this.GridViewOrders.DataSource = db.Orders.Where(x => x.EmployeeID == employeeId).ToList();
             this.GridViewOrders.DataBind();
+            this.UpdateProgress.Attributes.CssStyle["display"] = "none";
         }
     }
 }
